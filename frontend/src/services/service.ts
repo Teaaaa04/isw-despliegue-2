@@ -3,7 +3,7 @@ import { ActivitiesDetailResponse, Activity } from "../types/registration";
 const apiUrl = process.env.VITE_BACKEND_URL || "http://localhost:8000";
 
 export const obtenerActividades = async (): Promise<Activity[]> => {
-  const response = await fetch(`${apiUrl}/api/actividades`).then((res) =>
+  const response = await fetch(`${apiUrl}/actividades`).then((res) =>
     res.json()
   );
   return response.actividades;
