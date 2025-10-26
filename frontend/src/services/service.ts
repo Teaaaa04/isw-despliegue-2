@@ -1,6 +1,6 @@
 import { ActivitiesDetailResponse, Activity } from "../types/registration";
 
-const apiUrl = process.env.VITE_BACKEND_URL || "http://localhost:8000";
+const apiUrl = import.meta.env.VITE_BACKEND_URL;
 
 export const obtenerActividades = async (): Promise<Activity[]> => {
   const response = await fetch(`${apiUrl}/actividades`).then((res) =>
